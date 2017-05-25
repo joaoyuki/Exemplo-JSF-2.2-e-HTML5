@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf" >
+
+    <head jsf:id="head" >
+        <title> Página de login com JSF 2.2 e HTML 5 </title>
+    </head>
+
+    <body jsf:id="body">
+        <form jsf:id="form">
+            <h:messages showDetail="true" tooltip="true" />
+            <table>
+                <tr>
+                    <th>Utilizando Pass Through Elements</th>
+                </tr>
+                <tr>
+                    
+                </tr>
+                <tr>
+                    <th>
+                        Usuário: <input 
+                            type="text" 
+                            jsf:id="usuario"
+                            placeholder="Digite o usuário"
+                            jsf:value="#{usuarioBean.usuario.usuario}"/>
+                    </th>
+                    <th>
+                        Senha: <input 
+                            type="password" 
+                            placeholder="Digite a senha" 
+                            jsf:id="senha" 
+                            jsf:value="#{usuarioBean.usuario.senha}" />
+                    </th>
+                    <th>
+                        <button jsf:action="#{usuarioBean.doLogin()}">Fazer login</button>
+                    </th>
+                </tr>
+            </table>    
+        </form>
+    </body>
+</html>
+
